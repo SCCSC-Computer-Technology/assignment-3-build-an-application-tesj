@@ -11,26 +11,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Linq.Dynamic.Core;
+using T_Speich_State_Data_Class_Library;
 
 namespace T_Speich_CPT_206_Lab_3
 {
     public partial class MainForm : Form
     {
-        public static StateDBDataContext db;
-        private string column;
-        private string order;
-        private string filter;
-        private string filterValue;
+        public static StateData stateData;
         public MainForm()
         {
             InitializeComponent();
 
             //initialize objects and assign variable values
-            db = new StateDBDataContext();
-            column = "STATE_ID";
-            order = "ASC";
-            filter = "true";
-            filterValue = "";
+            stateData = new StateData();
         }
 
         private void detailsButton_Click(object sender, EventArgs e)
@@ -41,13 +34,12 @@ namespace T_Speich_CPT_206_Lab_3
                 DataGridViewRow row = stateDataGridView.CurrentRow;
 
                 //create state and city variables
-                STATE state;
-                STATE_LARGEST_CITY city;
+                State state;
 
                 try
                 {
                     //find the selected state in the data context object
-                    state = db.STATEs.Where(x => x.STATE_ID == Convert.ToInt32(row.Cells[0].Value)).Single();
+                    state = stateData.GetStateByID(Convert.ToInt32(row.Cells[0].Value));
                 }
                 catch (Exception ex) 
                 {
@@ -55,21 +47,9 @@ namespace T_Speich_CPT_206_Lab_3
                     return;
                 }
 
-                try
-                {
-                    //find the associated cities in the data context object
-                    city = db.STATE_LARGEST_CITies.Where(x => x.STATE_ID == state.STATE_ID).Single();
-                    
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Something went wrong when retrieving large city info:\n{ex.GetType()}\n{ex.Message}");
-                    return;
-                }
-
 
                 //instantiate a details form and open it
-                DetailsForm frm = new DetailsForm(state, city);
+                DetailsForm frm = new DetailsForm(state);
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
                     //update the binding source's data source
@@ -81,11 +61,19 @@ namespace T_Speich_CPT_206_Lab_3
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'stateDBDataSet.STATE' table. You can move, or remove it, as needed.
-            this.stateTableAdapter.Fill(this.stateDBDataSet.STATE);
+
             sortColumnComboBox.SelectedIndex = 0;
             sortOrderComboBox.SelectedIndex = 0;
+
+            stateDataGridView.AutoGenerateColumns = true; //setting this here because VS likes to reset it in MainForm.Designer.cs
             UpdateBindingSource();
+
+            //remove the underscores from the DataGridView column headers
+            for (int i = 0; i < stateDataGridView.Columns.Count; i++)
+            {
+                stateDataGridView.Columns[i].HeaderText = stateDataGridView.Columns[i].HeaderText.Replace('_', ' ');
+            }
+            stateDataGridView.Columns[0].Visible = false;
         }
 
         private void sortButton_Click(object sender, EventArgs e)
@@ -100,16 +88,16 @@ namespace T_Speich_CPT_206_Lab_3
                 //decide which column to use
                 if (sortColumnComboBox.SelectedIndex == 2)
                 {
-                    newColumn = "STATE_FLAG_DESC";
+                    newColumn = "State_Flag_Description";
                 }
                 else if (sortColumnComboBox.SelectedIndex == 7)
                 {
-                    newColumn = "STATE_IT_JOB_PERCENT";
+                    newColumn = "State_Computer_Jobs_Percent";
                 }
                 else
                 {
-                    //convert the selected item's text to uppercase and replace spaces with '-'
-                    newColumn = sortColumnComboBox.SelectedItem.ToString().ToUpper().Replace(" ", "_");
+                    //replaces the selected item's spaces with '-'
+                    newColumn = sortColumnComboBox.SelectedItem.ToString().Replace(" ", "_");
                 }
             }
             else
@@ -132,8 +120,8 @@ namespace T_Speich_CPT_206_Lab_3
             }
 
             //assign the new column and order values to column and order
-            column = newColumn;
-            order = newOrder;
+            stateData.SortColumn = newColumn;
+            stateData.SortOrder = newOrder;
 
             //change the binding source's source to the datacontext STATE table ordered by the new column and order
             UpdateBindingSource();
@@ -142,11 +130,10 @@ namespace T_Speich_CPT_206_Lab_3
         private void addButton_Click(object sender, EventArgs e)
         {
             //create a state and city object
-            STATE state = new STATE();
-            STATE_LARGEST_CITY city = new STATE_LARGEST_CITY();
+            State state = new State();
 
             //create and open the Add New State form
-            AddStateForm frm = new AddStateForm(state, city);
+            AddStateForm frm = new AddStateForm(state);
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 //refresh the binding source if changes were made
@@ -158,7 +145,7 @@ namespace T_Speich_CPT_206_Lab_3
         {
             this.Validate();
             this.stateBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.stateDBDataSet);
+            //this.tableAdapterManager.UpdateAll(this.stateDBDataSet);
 
         }
 
@@ -167,7 +154,8 @@ namespace T_Speich_CPT_206_Lab_3
             try
             {
                 //set the data source to the STATE table sorted and filtered by the current selection
-                stateBindingSource.DataSource = db.STATEs.Where(filter, filterValue).OrderBy($"{column} {order}");
+                stateBindingSource.DataSource = stateData.GetFilteredAndSortedStates();
+
             }
             catch (Exception ex)
             {
@@ -178,7 +166,6 @@ namespace T_Speich_CPT_206_Lab_3
 
         private void exitButton_Click(object sender, EventArgs e)
         {
-            db.Dispose();
             Application.Exit();
         }
 
@@ -196,20 +183,8 @@ namespace T_Speich_CPT_206_Lab_3
 
                     try
                     {
-                        //delete the state and cities
-                        db.STATEs.DeleteOnSubmit(db.STATEs.Where(x => x.STATE_ID == stateID).Single());
-                        db.STATE_LARGEST_CITies.DeleteOnSubmit(db.STATE_LARGEST_CITies.Where(x => x.STATE_ID == stateID).Single());
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Something went wrong when trying to delete the state\n{ex.GetType()}\n{ex.Message}");
-                        return;
-                    }
-
-                    try
-                    {
-                        //confirm changes
-                        db.SubmitChanges();
+                        //delete the state
+                        stateData.RemoveAndSubmitState(stateID);
                     }
                     catch (Exception ex)
                     {
@@ -228,7 +203,7 @@ namespace T_Speich_CPT_206_Lab_3
             //declare variables
             string filterColumn = "";
             string filterOperator = "";
-            string filterText = "";
+            string filterValue = "";
             int selectedColumnIndex = filterColumnComboBox.SelectedIndex;
             int selectedFilterOperatorIndex = filterOperatorComboBox.SelectedIndex;
 
@@ -238,16 +213,16 @@ namespace T_Speich_CPT_206_Lab_3
                 //decide which column to use
                 if (selectedColumnIndex == 2)
                 {
-                    filterColumn = "STATE_FLAG_DESC";
+                    filterColumn = "State_Flag_Description";
                 }
                 else if (selectedColumnIndex == 8)
                 {
-                    filterColumn = "STATE_IT_JOB_PERCENT";
+                    filterColumn = "State_Computer_Jobs_Percent";
                 }
                 else
                 {
                     //convert the selected item's text to uppercase and replace spaces with '-'
-                    filterColumn = filterColumnComboBox.SelectedItem.ToString().ToUpper().Replace(" ", "_");
+                    filterColumn = filterColumnComboBox.SelectedItem.ToString().Replace(" ", "_");
                 }
 
             }
@@ -291,7 +266,7 @@ namespace T_Speich_CPT_206_Lab_3
                     //if the user did not select a numeric column, assign the textbox v
                     if (selectedColumnIndex != 1 && selectedColumnIndex != 7 && selectedColumnIndex != 8)
                     {
-                        filterText = filterTextBox.Text;
+                        filterValue = filterTextBox.Text;
                     }
                     else
                     {
@@ -302,7 +277,7 @@ namespace T_Speich_CPT_206_Lab_3
                 else
                 {
                     //assign the text entered into the filter textbox to the filterText
-                    filterText = filterTextBox.Text;
+                    filterValue = filterTextBox.Text;
                 }
             }
             else
@@ -315,8 +290,8 @@ namespace T_Speich_CPT_206_Lab_3
             try
             {
                 //set the filter based on user selections and input
-                filter = $"{filterColumn}{filterOperator}";
-                filterValue = filterText;
+                stateData.Filter = $"{filterColumn}{filterOperator}";
+                stateData.FilterValue = filterValue;
                 UpdateBindingSource(); //apply the filter
             }
             catch (Exception ex)
@@ -333,7 +308,7 @@ namespace T_Speich_CPT_206_Lab_3
             filterTextBox.ResetText();
 
             //clear the filter
-            filter = "true";
+            stateData.Filter = "TRUE";
             UpdateBindingSource();
         }
     }
