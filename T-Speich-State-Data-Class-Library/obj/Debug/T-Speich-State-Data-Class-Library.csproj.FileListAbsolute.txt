@@ -1,0 +1,13 @@
+D:\SCC\CPT-206\Homework\Lab-3\assignment-3-build-an-application-tesj\T-Speich-State-Data-Class-Library\bin\Debug\StateData.mdf
+D:\SCC\CPT-206\Homework\Lab-3\assignment-3-build-an-application-tesj\T-Speich-State-Data-Class-Library\bin\Debug\StateData_log.ldf
+D:\SCC\CPT-206\Homework\Lab-3\assignment-3-build-an-application-tesj\T-Speich-State-Data-Class-Library\bin\Debug\T-Speich-State-Data-Class-Library.dll.config
+D:\SCC\CPT-206\Homework\Lab-3\assignment-3-build-an-application-tesj\T-Speich-State-Data-Class-Library\bin\Debug\T-Speich-State-Data-Class-Library.dll
+D:\SCC\CPT-206\Homework\Lab-3\assignment-3-build-an-application-tesj\T-Speich-State-Data-Class-Library\bin\Debug\T-Speich-State-Data-Class-Library.pdb
+D:\SCC\CPT-206\Homework\Lab-3\assignment-3-build-an-application-tesj\T-Speich-State-Data-Class-Library\bin\Debug\System.Linq.Dynamic.Core.dll
+D:\SCC\CPT-206\Homework\Lab-3\assignment-3-build-an-application-tesj\T-Speich-State-Data-Class-Library\bin\Debug\System.Linq.Dynamic.Core.pdb
+D:\SCC\CPT-206\Homework\Lab-3\assignment-3-build-an-application-tesj\T-Speich-State-Data-Class-Library\bin\Debug\System.Linq.Dynamic.Core.xml
+D:\SCC\CPT-206\Homework\Lab-3\assignment-3-build-an-application-tesj\T-Speich-State-Data-Class-Library\obj\Debug\T-Speich-State-Data-Class-Library.csproj.AssemblyReference.cache
+D:\SCC\CPT-206\Homework\Lab-3\assignment-3-build-an-application-tesj\T-Speich-State-Data-Class-Library\obj\Debug\T-Speich-State-Data-Class-Library.csproj.CoreCompileInputs.cache
+D:\SCC\CPT-206\Homework\Lab-3\assignment-3-build-an-application-tesj\T-Speich-State-Data-Class-Library\obj\Debug\T-Speich.DAA6A866.Up2Date
+D:\SCC\CPT-206\Homework\Lab-3\assignment-3-build-an-application-tesj\T-Speich-State-Data-Class-Library\obj\Debug\T-Speich-State-Data-Class-Library.dll
+D:\SCC\CPT-206\Homework\Lab-3\assignment-3-build-an-application-tesj\T-Speich-State-Data-Class-Library\obj\Debug\T-Speich-State-Data-Class-Library.pdb

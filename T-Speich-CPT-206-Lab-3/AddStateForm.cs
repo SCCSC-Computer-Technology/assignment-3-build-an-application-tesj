@@ -1,34 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.AxHost;
+using T_Speich_State_Data_Class_Library;
 
 namespace T_Speich_CPT_206_Lab_3
 {
     public partial class AddStateForm : Form
     {
-        private STATE state;
-        private STATE_LARGEST_CITY city;
-        public AddStateForm(STATE _state, STATE_LARGEST_CITY _city)
+        private State state;
+        public AddStateForm(State _state)
         {
             InitializeComponent();
             state = _state;
-            city = _city;
         }
 
         private void saveButton_Click(object sender, EventArgs e)
         {
             //begin checks for empty textboxes (ones that cause problems if empty)
             if (IsTextboxEmpty(stateNameTextBox.Text, "state name")) return;
-            if (IsTextboxEmpty(stateCapitolTextBox.Text, "state capitol")) return;
+            if (IsTextboxEmpty(stateCapitalTextBox.Text, "state capital")) return;
             if (IsTextboxEmpty(stateFlagDescTextBox.Text, "state flag description")) return;
-            if (IsTextboxEmpty(stateColorsTextBox.Text, "state colors")) return;
+            if (IsTextboxEmpty(stateFlowerTextBox.Text, "state flower")) return;
+            if (IsTextboxEmpty(stateBirdTextBox.Text, "state bird")) return;
+            if (IsTextboxEmpty(largestCitiesTextBox.Text, "largest cities")) return;
             //end checks for empty textboxes
 
             //try to parse population
@@ -40,7 +34,7 @@ namespace T_Speich_CPT_206_Lab_3
             }
             //try to parse median income and check if it is a valid number
             //if the textbox is empty, set the median income to 0
-            if (!decimal.TryParse(stateMedianIncomeTextBox.Text, out decimal medianIncome)
+            if (!int.TryParse(stateMedianIncomeTextBox.Text, out int medianIncome)
                 && !string.IsNullOrWhiteSpace(stateMedianIncomeTextBox.Text)
                 || medianIncome < 0)
             {
@@ -49,7 +43,7 @@ namespace T_Speich_CPT_206_Lab_3
             }
             //try to parse IT jobs percentage and check if it is a valid number
             //if the textbox is empty, set the IT jobs percentage to 0
-            if (!decimal.TryParse(stateITJobPercentTextBox.Text, out decimal itJobsPercent)
+            if (!double.TryParse(stateITJobPercentTextBox.Text, out double itJobsPercent)
                 && !string.IsNullOrWhiteSpace(stateITJobPercentTextBox.Text)
                 || itJobsPercent < 0 || itJobsPercent >= 100)
             {
@@ -58,35 +52,27 @@ namespace T_Speich_CPT_206_Lab_3
             }
 
             //assign all values to the current state and state cities entity objects
-            state.STATE_NAME = stateNameTextBox.Text;
-            state.STATE_POPULATION = population;
-            state.STATE_FLAG_DESC = stateFlagDescTextBox.Text;
-            state.STATE_FLOWER = stateFlowerTextBox.Text;
-            state.STATE_CAPITOL = stateCapitolTextBox.Text;
-            state.STATE_IT_JOB_PERCENT = itJobsPercent;
-            state.STATE_BIRD = stateBirdTextBox.Text;
-            state.STATE_COLORS = stateColorsTextBox.Text;
-            state.STATE_MEDIAN_INCOME = medianIncome;
-            city.LARGEST_CITY = largestCityTextBox.Text;
-            city.SECOND_LARGEST_CITY = secondLargestCityTextBox.Text;
-            city.THIRD_LARGEST_CITY = thirdLargestCityTextBox.Text;
+            state.State_Name = stateNameTextBox.Text;
+            state.State_Population = population;
+            state.State_Flag_Description = stateFlagDescTextBox.Text;
+            state.State_Flower = stateFlowerTextBox.Text;
+            state.State_Capital = stateCapitalTextBox.Text;
+            state.State_Computer_Jobs_Percent= itJobsPercent;
+            state.State_Bird = stateBirdTextBox.Text;
+            state.State_Colors = stateColorsTextBox.Text;
+            state.State_Median_Income = medianIncome;
+            state.State_Largest_Cities = largestCitiesTextBox.Text;
+
 
             try
             {
                 //insert a new record into STATE
-                MainForm.db.STATEs.InsertOnSubmit(state);
-                MainForm.db.SubmitChanges();
-
-                //set the city's state ID to the ID of the state just inserted into STATE
-                city.STATE_ID = state.STATE_ID;
-
-                //submit a new record into STATE_LARGEST_CITY
-                MainForm.db.STATE_LARGEST_CITies.InsertOnSubmit(city);
-                MainForm.db.SubmitChanges();
+                MainForm.stateData.InsertAndSubmitState(state);
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"There was a problem trying to add the new state:\n{ex.GetType()}\n{ex.Message}");
+                return;
             }
 
             //tell the user that the insert was successful and close this form
@@ -114,8 +100,8 @@ namespace T_Speich_CPT_206_Lab_3
         private void AddStateForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             //ask the user if they really want to close the form
-            if(this.DialogResult != DialogResult.OK &&
-                MessageBox.Show("Are you sure you want to close this form?\n(Any changes made will be lost)", "Close form",
+            if(this.DialogResult != DialogResult.OK && 
+                MessageBox.Show("Are you sure you want to close this form?\n(Any data entered will be lost)", "Close form",
                 MessageBoxButtons.YesNo) == DialogResult.No)
             {
                 //cancel the form closing

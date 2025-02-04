@@ -30,10 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.stateBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.stateBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.stateDBDataSet = new T_Speich_CPT_206_Lab_3.StateDBDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -44,18 +43,6 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.stateDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stateTableAdapter = new T_Speich_CPT_206_Lab_3.StateDBDataSetTableAdapters.STATETableAdapter();
-            this.tableAdapterManager = new T_Speich_CPT_206_Lab_3.StateDBDataSetTableAdapters.TableAdapterManager();
             this.sortButton = new System.Windows.Forms.Button();
             this.sortOrderComboBox = new System.Windows.Forms.ComboBox();
             this.sortColumnComboBox = new System.Windows.Forms.ComboBox();
@@ -70,16 +57,15 @@
             this.deleteButton = new System.Windows.Forms.Button();
             this.filterColumnComboBox = new System.Windows.Forms.ComboBox();
             this.filterButton = new System.Windows.Forms.Button();
+            this.resetFilterButton = new System.Windows.Forms.Button();
             this.filterOperatorComboBox = new System.Windows.Forms.ComboBox();
             this.filterTextBox = new System.Windows.Forms.TextBox();
-            this.resetFilterButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.stateBindingNavigator)).BeginInit();
             this.stateBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stateBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stateDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stateDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,16 +95,6 @@
             this.stateBindingNavigator.Size = new System.Drawing.Size(933, 25);
             this.stateBindingNavigator.TabIndex = 0;
             this.stateBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // stateBindingSource
-            // 
-            this.stateBindingSource.DataMember = "STATE";
-            this.stateBindingSource.DataSource = this.stateDBDataSet;
-            // 
-            // stateDBDataSet
-            // 
-            this.stateDBDataSet.DataSetName = "StateDBDataSet";
-            this.stateDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -194,26 +170,15 @@
             this.stateDataGridView.AllowUserToDeleteRows = false;
             this.stateDataGridView.AutoGenerateColumns = false;
             this.stateDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.stateDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10});
             this.stateDataGridView.DataSource = this.stateBindingSource;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.stateDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.stateDataGridView.DefaultCellStyle = dataGridViewCellStyle1;
             this.stateDataGridView.Location = new System.Drawing.Point(21, 28);
             this.stateDataGridView.MultiSelect = false;
             this.stateDataGridView.Name = "stateDataGridView";
@@ -225,94 +190,12 @@
             this.stateDataGridView.Size = new System.Drawing.Size(891, 328);
             this.stateDataGridView.TabIndex = 1;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "STATE_ID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "STATE_ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "STATE_NAME";
-            this.dataGridViewTextBoxColumn2.HeaderText = "State Name";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "STATE_POPULATION";
-            this.dataGridViewTextBoxColumn3.HeaderText = "State Population";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "STATE_FLAG_DESC";
-            this.dataGridViewTextBoxColumn4.HeaderText = "State Flag Description";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "STATE_COLORS";
-            this.dataGridViewTextBoxColumn5.HeaderText = "State Colors";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "STATE_BIRD";
-            this.dataGridViewTextBoxColumn6.HeaderText = "State Bird";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "STATE_FLOWER";
-            this.dataGridViewTextBoxColumn7.HeaderText = "State Flower";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "STATE_CAPITOL";
-            this.dataGridViewTextBoxColumn8.HeaderText = "State Capitol";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "STATE_MEDIAN_INCOME";
-            this.dataGridViewTextBoxColumn9.HeaderText = "State Median Income";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "STATE_IT_JOB_PERCENT";
-            this.dataGridViewTextBoxColumn10.HeaderText = "State IT Jobs Percent";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // stateTableAdapter
-            // 
-            this.stateTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.STATE_LARGEST_CITYTableAdapter = null;
-            this.tableAdapterManager.STATETableAdapter = this.stateTableAdapter;
-            this.tableAdapterManager.UpdateOrder = T_Speich_CPT_206_Lab_3.StateDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
             // sortButton
             // 
             this.sortButton.Location = new System.Drawing.Point(303, 465);
             this.sortButton.Name = "sortButton";
             this.sortButton.Size = new System.Drawing.Size(121, 23);
-            this.sortButton.TabIndex = 2;
+            this.sortButton.TabIndex = 5;
             this.sortButton.Text = "&Sort";
             this.toolTip1.SetToolTip(this.sortButton, "Sorts the states by the selected value in the selected order");
             this.sortButton.UseVisualStyleBackColor = true;
@@ -341,7 +224,7 @@
             "State Flag Description",
             "State Colors",
             "State Bird",
-            "State Capitol",
+            "State Capital",
             "State Median Income",
             "State IT Jobs Percent"});
             this.sortColumnComboBox.Location = new System.Drawing.Point(303, 436);
@@ -355,7 +238,7 @@
             this.detailsButton.Location = new System.Drawing.Point(123, 407);
             this.detailsButton.Name = "detailsButton";
             this.detailsButton.Size = new System.Drawing.Size(75, 42);
-            this.detailsButton.TabIndex = 5;
+            this.detailsButton.TabIndex = 2;
             this.detailsButton.Text = "&View Details";
             this.toolTip1.SetToolTip(this.detailsButton, "Opens a form to view the details of the selected state");
             this.detailsButton.UseVisualStyleBackColor = true;
@@ -366,7 +249,7 @@
             this.addButton.Location = new System.Drawing.Point(42, 406);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(75, 43);
-            this.addButton.TabIndex = 6;
+            this.addButton.TabIndex = 1;
             this.addButton.Text = "&Add State";
             this.toolTip1.SetToolTip(this.addButton, "Opens a form to enter info for a new state");
             this.addButton.UseVisualStyleBackColor = true;
@@ -374,10 +257,11 @@
             // 
             // exitButton
             // 
+            this.exitButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.exitButton.Location = new System.Drawing.Point(123, 455);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(75, 43);
-            this.exitButton.TabIndex = 7;
+            this.exitButton.TabIndex = 12;
             this.exitButton.Text = "E&xit";
             this.toolTip1.SetToolTip(this.exitButton, "Exits the program");
             this.exitButton.UseVisualStyleBackColor = true;
@@ -410,7 +294,7 @@
             this.stateSelectionComboBox.Location = new System.Drawing.Point(59, 377);
             this.stateSelectionComboBox.Name = "stateSelectionComboBox";
             this.stateSelectionComboBox.Size = new System.Drawing.Size(121, 23);
-            this.stateSelectionComboBox.TabIndex = 10;
+            this.stateSelectionComboBox.TabIndex = 0;
             this.toolTip1.SetToolTip(this.stateSelectionComboBox, "Select a state to view the details of");
             this.stateSelectionComboBox.ValueMember = "STATE_ID";
             // 
@@ -420,7 +304,7 @@
             this.label3.Location = new System.Drawing.Point(75, 359);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 15);
-            this.label3.TabIndex = 11;
+            this.label3.TabIndex = 0;
             this.label3.Text = "Select a State";
             // 
             // deleteButton
@@ -428,7 +312,7 @@
             this.deleteButton.Location = new System.Drawing.Point(42, 455);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(75, 43);
-            this.deleteButton.TabIndex = 12;
+            this.deleteButton.TabIndex = 11;
             this.deleteButton.Text = "&Delete State";
             this.toolTip1.SetToolTip(this.deleteButton, "Deletes the selected state");
             this.deleteButton.UseVisualStyleBackColor = true;
@@ -445,13 +329,13 @@
             "State Colors",
             "State Bird",
             "State Flower",
-            "State Capitol",
+            "State Capital",
             "State Median Income",
             "State IT Jobs Percent"});
             this.filterColumnComboBox.Location = new System.Drawing.Point(475, 439);
             this.filterColumnComboBox.Name = "filterColumnComboBox";
             this.filterColumnComboBox.Size = new System.Drawing.Size(121, 23);
-            this.filterColumnComboBox.TabIndex = 14;
+            this.filterColumnComboBox.TabIndex = 6;
             this.toolTip1.SetToolTip(this.filterColumnComboBox, "Selects a value to sort by (i.e. name, population, bird, etc.)");
             // 
             // filterButton
@@ -459,12 +343,23 @@
             this.filterButton.Location = new System.Drawing.Point(556, 475);
             this.filterButton.Name = "filterButton";
             this.filterButton.Size = new System.Drawing.Size(75, 23);
-            this.filterButton.TabIndex = 13;
-            this.filterButton.Text = "Filter";
+            this.filterButton.TabIndex = 9;
+            this.filterButton.Text = "&Filter";
             this.toolTip1.SetToolTip(this.filterButton, "Filter the database to only show states that match  the criteria selected/entered" +
         "");
             this.filterButton.UseVisualStyleBackColor = true;
             this.filterButton.Click += new System.EventHandler(this.filterButton_Click);
+            // 
+            // resetFilterButton
+            // 
+            this.resetFilterButton.Location = new System.Drawing.Point(637, 475);
+            this.resetFilterButton.Name = "resetFilterButton";
+            this.resetFilterButton.Size = new System.Drawing.Size(75, 23);
+            this.resetFilterButton.TabIndex = 10;
+            this.resetFilterButton.Text = "&Reset";
+            this.toolTip1.SetToolTip(this.resetFilterButton, "Resets the filter so that every state will show");
+            this.resetFilterButton.UseVisualStyleBackColor = true;
+            this.resetFilterButton.Click += new System.EventHandler(this.resetFilterButton_Click);
             // 
             // filterOperatorComboBox
             // 
@@ -481,25 +376,14 @@
             this.filterOperatorComboBox.Location = new System.Drawing.Point(602, 439);
             this.filterOperatorComboBox.Name = "filterOperatorComboBox";
             this.filterOperatorComboBox.Size = new System.Drawing.Size(78, 23);
-            this.filterOperatorComboBox.TabIndex = 15;
+            this.filterOperatorComboBox.TabIndex = 7;
             // 
             // filterTextBox
             // 
             this.filterTextBox.Location = new System.Drawing.Point(686, 439);
             this.filterTextBox.Name = "filterTextBox";
             this.filterTextBox.Size = new System.Drawing.Size(100, 22);
-            this.filterTextBox.TabIndex = 16;
-            // 
-            // resetFilterButton
-            // 
-            this.resetFilterButton.Location = new System.Drawing.Point(637, 475);
-            this.resetFilterButton.Name = "resetFilterButton";
-            this.resetFilterButton.Size = new System.Drawing.Size(75, 23);
-            this.resetFilterButton.TabIndex = 17;
-            this.resetFilterButton.Text = "Reset";
-            this.toolTip1.SetToolTip(this.resetFilterButton, "Resets the filter so that every state will show");
-            this.resetFilterButton.UseVisualStyleBackColor = true;
-            this.resetFilterButton.Click += new System.EventHandler(this.resetFilterButton_Click);
+            this.filterTextBox.TabIndex = 8;
             // 
             // label4
             // 
@@ -530,8 +414,10 @@
             // 
             // MainForm
             // 
+            this.AcceptButton = this.detailsButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.exitButton;
             this.ClientSize = new System.Drawing.Size(933, 519);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -558,13 +444,12 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "State Info";
+            this.Text = "T-Speich-CPT-206-A01S-Lab-3: State Info";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.stateBindingNavigator)).EndInit();
             this.stateBindingNavigator.ResumeLayout(false);
             this.stateBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stateBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stateDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stateDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -573,10 +458,10 @@
 
         #endregion
 
-        private StateDBDataSet stateDBDataSet;
+        //private StateDBDataSet stateDBDataSet;
         private System.Windows.Forms.BindingSource stateBindingSource;
-        private StateDBDataSetTableAdapters.STATETableAdapter stateTableAdapter;
-        private StateDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        //private StateDBDataSetTableAdapters.STATETableAdapter stateTableAdapter;
+        //private StateDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator stateBindingNavigator;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
@@ -591,16 +476,6 @@
         private System.Windows.Forms.Button sortButton;
         private System.Windows.Forms.ComboBox sortOrderComboBox;
         private System.Windows.Forms.ComboBox sortColumnComboBox;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.Button detailsButton;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button exitButton;
