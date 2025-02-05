@@ -3,17 +3,6 @@
   "WorkspaceRootPath": "D:\\SCC\\CPT-206\\Homework\\Lab-3\\assignment-3-build-an-application-tesj\\T-Speich-CPT-206-Lab-3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{120E8B20-7A80-4F36-8F7C-413C1701B88E}|..\\T-Speich-State-Data-Class-Library\\T-Speich-State-Data-Class-Library.csproj|d:\\scc\\cpt-206\\homework\\lab-3\\assignment-3-build-an-application-tesj\\t-speich-state-data-class-library\\statedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F228D1BF-F2D9-4205-A786-832C0281BBA9}|T-Speich-CPT-206-Lab-3.csproj|D:\\SCC\\CPT-206\\Homework\\Lab-3\\assignment-3-build-an-application-tesj\\T-Speich-CPT-206-Lab-3\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F228D1BF-F2D9-4205-A786-832C0281BBA9}|T-Speich-CPT-206-Lab-3.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F228D1BF-F2D9-4205-A786-832C0281BBA9}|T-Speich-CPT-206-Lab-3.csproj|D:\\SCC\\CPT-206\\Homework\\Lab-3\\assignment-3-build-an-application-tesj\\T-Speich-CPT-206-Lab-3\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F228D1BF-F2D9-4205-A786-832C0281BBA9}|T-Speich-CPT-206-Lab-3.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F228D1BF-F2D9-4205-A786-832C0281BBA9}|T-Speich-CPT-206-Lab-3.csproj|D:\\SCC\\CPT-206\\Homework\\Lab-3\\assignment-3-build-an-application-tesj\\T-Speich-CPT-206-Lab-3\\detailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F228D1BF-F2D9-4205-A786-832C0281BBA9}|T-Speich-CPT-206-Lab-3.csproj|solutionrelative:detailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -22,12 +11,23 @@
       "RelativeMoniker": "D:0:0:{F228D1BF-F2D9-4205-A786-832C0281BBA9}|T-Speich-CPT-206-Lab-3.csproj|solutionrelative:detailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{F228D1BF-F2D9-4205-A786-832C0281BBA9}|T-Speich-CPT-206-Lab-3.csproj|D:\\SCC\\CPT-206\\Homework\\Lab-3\\assignment-3-build-an-application-tesj\\T-Speich-CPT-206-Lab-3\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F228D1BF-F2D9-4205-A786-832C0281BBA9}|T-Speich-CPT-206-Lab-3.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F228D1BF-F2D9-4205-A786-832C0281BBA9}|T-Speich-CPT-206-Lab-3.csproj|d:\\scc\\cpt-206\\homework\\lab-3\\assignment-3-build-an-application-tesj\\t-speich-cpt-206-lab-3\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F228D1BF-F2D9-4205-A786-832C0281BBA9}|T-Speich-CPT-206-Lab-3.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F228D1BF-F2D9-4205-A786-832C0281BBA9}|T-Speich-CPT-206-Lab-3.csproj|D:\\SCC\\CPT-206\\Homework\\Lab-3\\assignment-3-build-an-application-tesj\\T-Speich-CPT-206-Lab-3\\addstateform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F228D1BF-F2D9-4205-A786-832C0281BBA9}|T-Speich-CPT-206-Lab-3.csproj|solutionrelative:addstateform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F228D1BF-F2D9-4205-A786-832C0281BBA9}|T-Speich-CPT-206-Lab-3.csproj|d:\\scc\\cpt-206\\homework\\lab-3\\assignment-3-build-an-application-tesj\\t-speich-cpt-206-lab-3\\addstateform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F228D1BF-F2D9-4205-A786-832C0281BBA9}|T-Speich-CPT-206-Lab-3.csproj|D:\\SCC\\CPT-206\\Homework\\Lab-3\\assignment-3-build-an-application-tesj\\T-Speich-CPT-206-Lab-3\\addstateform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F228D1BF-F2D9-4205-A786-832C0281BBA9}|T-Speich-CPT-206-Lab-3.csproj|solutionrelative:addstateform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{120E8B20-7A80-4F36-8F7C-413C1701B88E}|..\\T-Speich-State-Data-Class-Library\\T-Speich-State-Data-Class-Library.csproj|d:\\scc\\cpt-206\\homework\\lab-3\\assignment-3-build-an-application-tesj\\t-speich-state-data-class-library\\statedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -37,7 +37,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -45,7 +45,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "AddStateForm.cs [Design]",
               "DocumentMoniker": "D:\\SCC\\CPT-206\\Homework\\Lab-3\\assignment-3-build-an-application-tesj\\T-Speich-CPT-206-Lab-3\\AddStateForm.cs",
               "RelativeDocumentMoniker": "AddStateForm.cs",
@@ -57,20 +57,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "DetailsForm.cs",
               "DocumentMoniker": "D:\\SCC\\CPT-206\\Homework\\Lab-3\\assignment-3-build-an-application-tesj\\T-Speich-CPT-206-Lab-3\\DetailsForm.cs",
               "RelativeDocumentMoniker": "DetailsForm.cs",
               "ToolTip": "D:\\SCC\\CPT-206\\Homework\\Lab-3\\assignment-3-build-an-application-tesj\\T-Speich-CPT-206-Lab-3\\DetailsForm.cs",
               "RelativeToolTip": "DetailsForm.cs",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAowCYAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAqwCYAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-31T01:10:35.658Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "DetailsForm.cs [Design]",
               "DocumentMoniker": "D:\\SCC\\CPT-206\\Homework\\Lab-3\\assignment-3-build-an-application-tesj\\T-Speich-CPT-206-Lab-3\\DetailsForm.cs",
               "RelativeDocumentMoniker": "DetailsForm.cs",
@@ -82,33 +82,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MainForm.cs",
               "DocumentMoniker": "D:\\SCC\\CPT-206\\Homework\\Lab-3\\assignment-3-build-an-application-tesj\\T-Speich-CPT-206-Lab-3\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
               "ToolTip": "D:\\SCC\\CPT-206\\Homework\\Lab-3\\assignment-3-build-an-application-tesj\\T-Speich-CPT-206-Lab-3\\MainForm.cs",
               "RelativeToolTip": "MainForm.cs",
-              "ViewState": "AgIAAGoAAAAAAAAAAAAwwEYAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAPAAAAAAAAAAAAAkwAoAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-31T00:57:34.097Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "StateData.cs",
               "DocumentMoniker": "D:\\SCC\\CPT-206\\Homework\\Lab-3\\assignment-3-build-an-application-tesj\\T-Speich-State-Data-Class-Library\\StateData.cs",
               "RelativeDocumentMoniker": "..\\T-Speich-State-Data-Class-Library\\StateData.cs",
               "ToolTip": "D:\\SCC\\CPT-206\\Homework\\Lab-3\\assignment-3-build-an-application-tesj\\T-Speich-State-Data-Class-Library\\StateData.cs",
               "RelativeToolTip": "..\\T-Speich-State-Data-Class-Library\\StateData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-03T21:44:47.969Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MainForm.cs [Design]",
               "DocumentMoniker": "D:\\SCC\\CPT-206\\Homework\\Lab-3\\assignment-3-build-an-application-tesj\\T-Speich-CPT-206-Lab-3\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
@@ -120,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "AddStateForm.cs",
               "DocumentMoniker": "D:\\SCC\\CPT-206\\Homework\\Lab-3\\assignment-3-build-an-application-tesj\\T-Speich-CPT-206-Lab-3\\AddStateForm.cs",
               "RelativeDocumentMoniker": "AddStateForm.cs",

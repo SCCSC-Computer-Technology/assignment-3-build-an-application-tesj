@@ -58,6 +58,7 @@
             // 
             // stateNameTextBox
             // 
+            this.stateNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.stateNameTextBox.Location = new System.Drawing.Point(27, 40);
             this.stateNameTextBox.Name = "stateNameTextBox";
             this.stateNameTextBox.Size = new System.Drawing.Size(207, 22);
@@ -65,6 +66,7 @@
             // 
             // statePopulationTextBox
             // 
+            this.statePopulationTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.statePopulationTextBox.Location = new System.Drawing.Point(26, 298);
             this.statePopulationTextBox.Name = "statePopulationTextBox";
             this.statePopulationTextBox.Size = new System.Drawing.Size(207, 22);
@@ -72,6 +74,7 @@
             // 
             // stateCapitalTextBox
             // 
+            this.stateCapitalTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.stateCapitalTextBox.Location = new System.Drawing.Point(26, 83);
             this.stateCapitalTextBox.Name = "stateCapitalTextBox";
             this.stateCapitalTextBox.Size = new System.Drawing.Size(207, 22);
@@ -79,6 +82,7 @@
             // 
             // stateFlagDescTextBox
             // 
+            this.stateFlagDescTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.stateFlagDescTextBox.Location = new System.Drawing.Point(26, 126);
             this.stateFlagDescTextBox.Multiline = true;
             this.stateFlagDescTextBox.Name = "stateFlagDescTextBox";
@@ -87,6 +91,7 @@
             // 
             // stateColorsTextBox
             // 
+            this.stateColorsTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.stateColorsTextBox.Location = new System.Drawing.Point(26, 212);
             this.stateColorsTextBox.Multiline = true;
             this.stateColorsTextBox.Name = "stateColorsTextBox";
@@ -140,6 +145,7 @@
             // 
             // saveButton
             // 
+            this.saveButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.saveButton.Location = new System.Drawing.Point(167, 381);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(91, 39);
@@ -187,6 +193,7 @@
             // 
             // stateMedianIncomeTextBox
             // 
+            this.stateMedianIncomeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.stateMedianIncomeTextBox.Location = new System.Drawing.Point(273, 126);
             this.stateMedianIncomeTextBox.Name = "stateMedianIncomeTextBox";
             this.stateMedianIncomeTextBox.Size = new System.Drawing.Size(207, 22);
@@ -194,6 +201,7 @@
             // 
             // stateFlowerTextBox
             // 
+            this.stateFlowerTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.stateFlowerTextBox.Location = new System.Drawing.Point(272, 83);
             this.stateFlowerTextBox.Name = "stateFlowerTextBox";
             this.stateFlowerTextBox.Size = new System.Drawing.Size(207, 22);
@@ -201,6 +209,7 @@
             // 
             // stateITJobPercentTextBox
             // 
+            this.stateITJobPercentTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.stateITJobPercentTextBox.Location = new System.Drawing.Point(272, 169);
             this.stateITJobPercentTextBox.Name = "stateITJobPercentTextBox";
             this.stateITJobPercentTextBox.Size = new System.Drawing.Size(207, 22);
@@ -208,6 +217,7 @@
             // 
             // stateBirdTextBox
             // 
+            this.stateBirdTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.stateBirdTextBox.Location = new System.Drawing.Point(273, 40);
             this.stateBirdTextBox.Name = "stateBirdTextBox";
             this.stateBirdTextBox.Size = new System.Drawing.Size(207, 22);
@@ -224,6 +234,7 @@
             // 
             // largestCitiesTextBox
             // 
+            this.largestCitiesTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.largestCitiesTextBox.Location = new System.Drawing.Point(272, 212);
             this.largestCitiesTextBox.Multiline = true;
             this.largestCitiesTextBox.Name = "largestCitiesTextBox";
@@ -232,6 +243,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.stateBirdTextBox);
             this.panel2.Controls.Add(this.stateITJobPercentTextBox);
@@ -261,6 +273,7 @@
             // exitButton
             // 
             this.exitButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.exitButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.exitButton.Location = new System.Drawing.Point(283, 381);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(91, 39);
@@ -275,6 +288,7 @@
             this.AcceptButton = this.saveButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.CancelButton = this.exitButton;
             this.ClientSize = new System.Drawing.Size(536, 441);
             this.Controls.Add(this.exitButton);
