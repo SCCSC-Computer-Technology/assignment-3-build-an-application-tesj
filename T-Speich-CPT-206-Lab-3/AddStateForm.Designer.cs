@@ -30,26 +30,26 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.stateNameTextBox = new System.Windows.Forms.TextBox();
-            this.statePopulationTextBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.stateCapitalTextBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.stateFlagDescTextBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.stateColorsTextBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.stateBirdTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.stateITJobPercentTextBox = new System.Windows.Forms.TextBox();
+            this.stateNameTextBox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.statePopulationTextBox = new System.Windows.Forms.TextBox();
             this.stateFlowerTextBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.stateMedianIncomeTextBox = new System.Windows.Forms.TextBox();
+            this.stateCapitalTextBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.largestCitiesTextBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.stateFlagDescTextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.stateColorsTextBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.saveButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
@@ -58,6 +58,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.stateBirdTextBox);
             this.panel2.Controls.Add(this.label1);
@@ -84,6 +85,14 @@
             this.panel2.Size = new System.Drawing.Size(508, 352);
             this.panel2.TabIndex = 0;
             // 
+            // stateBirdTextBox
+            // 
+            this.stateBirdTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.stateBirdTextBox.Location = new System.Drawing.Point(273, 40);
+            this.stateBirdTextBox.Name = "stateBirdTextBox";
+            this.stateBirdTextBox.Size = new System.Drawing.Size(207, 22);
+            this.stateBirdTextBox.TabIndex = 5;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -93,19 +102,46 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "State Name";
             // 
+            // stateITJobPercentTextBox
+            // 
+            this.stateITJobPercentTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.stateITJobPercentTextBox.Location = new System.Drawing.Point(272, 169);
+            this.stateITJobPercentTextBox.Name = "stateITJobPercentTextBox";
+            this.stateITJobPercentTextBox.Size = new System.Drawing.Size(207, 22);
+            this.stateITJobPercentTextBox.TabIndex = 8;
+            // 
             // stateNameTextBox
             // 
+            this.stateNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.stateNameTextBox.Location = new System.Drawing.Point(27, 40);
             this.stateNameTextBox.Name = "stateNameTextBox";
             this.stateNameTextBox.Size = new System.Drawing.Size(207, 22);
             this.stateNameTextBox.TabIndex = 0;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(270, 194);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(127, 15);
+            this.label11.TabIndex = 25;
+            this.label11.Text = "State\'s Largest Cities";
+            // 
             // statePopulationTextBox
             // 
+            this.statePopulationTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.statePopulationTextBox.Location = new System.Drawing.Point(26, 298);
             this.statePopulationTextBox.Name = "statePopulationTextBox";
             this.statePopulationTextBox.Size = new System.Drawing.Size(207, 22);
             this.statePopulationTextBox.TabIndex = 4;
+            // 
+            // stateFlowerTextBox
+            // 
+            this.stateFlowerTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.stateFlowerTextBox.Location = new System.Drawing.Point(272, 83);
+            this.stateFlowerTextBox.Name = "stateFlowerTextBox";
+            this.stateFlowerTextBox.Size = new System.Drawing.Size(207, 22);
+            this.stateFlowerTextBox.TabIndex = 6;
             // 
             // label5
             // 
@@ -116,12 +152,39 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "State Colors (optional)";
             // 
+            // stateMedianIncomeTextBox
+            // 
+            this.stateMedianIncomeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.stateMedianIncomeTextBox.Location = new System.Drawing.Point(273, 126);
+            this.stateMedianIncomeTextBox.Name = "stateMedianIncomeTextBox";
+            this.stateMedianIncomeTextBox.Size = new System.Drawing.Size(207, 22);
+            this.stateMedianIncomeTextBox.TabIndex = 7;
+            // 
             // stateCapitalTextBox
             // 
+            this.stateCapitalTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.stateCapitalTextBox.Location = new System.Drawing.Point(26, 83);
             this.stateCapitalTextBox.Name = "stateCapitalTextBox";
             this.stateCapitalTextBox.Size = new System.Drawing.Size(207, 22);
             this.stateCapitalTextBox.TabIndex = 1;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(270, 22);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(63, 15);
+            this.label10.TabIndex = 16;
+            this.label10.Text = "State Bird";
+            // 
+            // largestCitiesTextBox
+            // 
+            this.largestCitiesTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.largestCitiesTextBox.Location = new System.Drawing.Point(272, 212);
+            this.largestCitiesTextBox.Multiline = true;
+            this.largestCitiesTextBox.Name = "largestCitiesTextBox";
+            this.largestCitiesTextBox.Size = new System.Drawing.Size(207, 108);
+            this.largestCitiesTextBox.TabIndex = 9;
             // 
             // label4
             // 
@@ -132,14 +195,33 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "State Capital";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(269, 151);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(137, 15);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "State IT Job Percentage";
+            // 
             // stateFlagDescTextBox
             // 
+            this.stateFlagDescTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.stateFlagDescTextBox.Location = new System.Drawing.Point(26, 126);
             this.stateFlagDescTextBox.MaxLength = 150;
             this.stateFlagDescTextBox.Multiline = true;
             this.stateFlagDescTextBox.Name = "stateFlagDescTextBox";
             this.stateFlagDescTextBox.Size = new System.Drawing.Size(207, 65);
             this.stateFlagDescTextBox.TabIndex = 2;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(270, 65);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(75, 15);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "State Flower";
             // 
             // label3
             // 
@@ -150,8 +232,18 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "State Population";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(270, 108);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(120, 15);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "State Median Income";
+            // 
             // stateColorsTextBox
             // 
+            this.stateColorsTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.stateColorsTextBox.Location = new System.Drawing.Point(26, 212);
             this.stateColorsTextBox.MaxLength = 50;
             this.stateColorsTextBox.Multiline = true;
@@ -167,87 +259,6 @@
             this.label2.Size = new System.Drawing.Size(129, 15);
             this.label2.TabIndex = 6;
             this.label2.Text = "State Flag Description";
-            // 
-            // stateBirdTextBox
-            // 
-            this.stateBirdTextBox.Location = new System.Drawing.Point(273, 40);
-            this.stateBirdTextBox.Name = "stateBirdTextBox";
-            this.stateBirdTextBox.Size = new System.Drawing.Size(207, 22);
-            this.stateBirdTextBox.TabIndex = 5;
-            // 
-            // stateITJobPercentTextBox
-            // 
-            this.stateITJobPercentTextBox.Location = new System.Drawing.Point(272, 169);
-            this.stateITJobPercentTextBox.Name = "stateITJobPercentTextBox";
-            this.stateITJobPercentTextBox.Size = new System.Drawing.Size(207, 22);
-            this.stateITJobPercentTextBox.TabIndex = 8;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(270, 194);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(127, 15);
-            this.label11.TabIndex = 25;
-            this.label11.Text = "State\'s Largest Cities";
-            // 
-            // stateFlowerTextBox
-            // 
-            this.stateFlowerTextBox.Location = new System.Drawing.Point(272, 83);
-            this.stateFlowerTextBox.Name = "stateFlowerTextBox";
-            this.stateFlowerTextBox.Size = new System.Drawing.Size(207, 22);
-            this.stateFlowerTextBox.TabIndex = 6;
-            // 
-            // stateMedianIncomeTextBox
-            // 
-            this.stateMedianIncomeTextBox.Location = new System.Drawing.Point(273, 126);
-            this.stateMedianIncomeTextBox.Name = "stateMedianIncomeTextBox";
-            this.stateMedianIncomeTextBox.Size = new System.Drawing.Size(207, 22);
-            this.stateMedianIncomeTextBox.TabIndex = 7;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(270, 22);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(63, 15);
-            this.label10.TabIndex = 16;
-            this.label10.Text = "State Bird";
-            // 
-            // largestCitiesTextBox
-            // 
-            this.largestCitiesTextBox.Location = new System.Drawing.Point(272, 212);
-            this.largestCitiesTextBox.Multiline = true;
-            this.largestCitiesTextBox.Name = "largestCitiesTextBox";
-            this.largestCitiesTextBox.Size = new System.Drawing.Size(207, 108);
-            this.largestCitiesTextBox.TabIndex = 9;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(269, 151);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(137, 15);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "State IT Job Percentage";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(270, 65);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 15);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "State Flower";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(270, 108);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(120, 15);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "State Median Income";
             // 
             // saveButton
             // 
@@ -278,6 +289,7 @@
             this.AcceptButton = this.saveButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.CancelButton = this.exitButton;
             this.ClientSize = new System.Drawing.Size(536, 441);
             this.Controls.Add(this.exitButton);
