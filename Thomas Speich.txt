@@ -1,0 +1,10 @@
+Thomas, I like how your code and forms look uniquely different and the color forms are a match with different names. The comments in each
+code of the forms are there with reason and I espically like there's a shorter "if" to check for empty boxes for the DetailsForm for
+example "if(IsTextboxEmpty(stateNameTextBox.Text, "state name")) return;" for each category of the database. However, there isn't your
+name in comment.
+
+Once running the program, everything ran smoothly and before existing the "View Details" button and click "Exit without saving" button it
+asked me if I was sure because certain changes will not be save if I added anything.
+
+Overall, your work is extraordinary and fantastic. Additionally, your programming skills have been shown through your hard work and
+knowledge. Great job! :)
